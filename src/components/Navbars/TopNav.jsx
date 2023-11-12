@@ -102,11 +102,11 @@ function TopNav(TopNavProps) {
           {/* flag to chang language */}
           <div className="  relative">
             <TopMainIcons Icons={UsersIcon} />
-            <div className=" lg:block hidden  top-1 right-2 absolute w-3 h-3 bg-red-500 rounded-full"></div>
+            <div className=" hidden  top-1 right-2 absolute w-3 h-3 bg-red-500 rounded-full"></div>
           </div>
           <div className=" relative">
             <TopMainIcons Icons={Bell} />
-            <div className="lg:block hidden top-1 right-2 absolute w-3 h-3 bg-red-500 rounded-full"></div>
+            <div className=" hidden top-1 right-2 absolute w-3 h-3 bg-red-500 rounded-full"></div>
           </div>
           <div onClick={() => setSetting(!setting)} className=" relative">
             <div className=" bg-transparent p-2 rounded-full cursor-pointer">

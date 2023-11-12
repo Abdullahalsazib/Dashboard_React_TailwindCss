@@ -55,7 +55,7 @@ function SideNav(SideNavProps) {
          bg-white   dark:bg-slate-900  
         ${
           myOpen === true
-            ? " duration-150 -right-[100%] w-[320px] md:w-[80px] "
+            ? " duration-200 hidden md:block md:relative absolute w-[320px] md:w-[80px] "
             : "w-[322px]"
         } duration-200 top-14 md:left-0 md:top-0 absolute md:relative`}
       >

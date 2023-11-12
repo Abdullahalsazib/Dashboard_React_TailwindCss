@@ -15,7 +15,7 @@ function MainAppContent() {
             
             <div className=" py-5 space-y-2 md:space-y-4">
             <div className=" 2xl:w-[500px]">
-              <h1 className=" text-center md:text-left text-[25px] md:text-[28px] 2xl:text-[40px]  dark:text-slate-200 capitalize font-bold">
+              <h1 className=" text-center md:text-left text-[30px] md:text-[28px] 2xl:text-[40px]  dark:text-slate-200 capitalize font-bold">
                 welcome back <br /> Fabiana Copmany
               </h1>
               <p className=" md:text-left text-center md:px-0 px-20 text-[9px] md:text-sm font-semibold dark:text-slate-300 dark:capitalize text-slate-600">
@@ -44,8 +44,8 @@ function MainAppContent() {
             />
             </div>
         </div>
-        <div className=" rounded-lg w-full xl:w-[30%] topSendCard flex items-end justify-center">
-          <div className=" py-10 xl:py-6 px-5 ">
+        <div className="py-5 md:h-auto h-[300px] md:py-0 rounded-lg w-full xl:w-[30%] topSendCard flex items-end">
+          <div className="  md:py-10 xl:py-6 px-5 ">
             <p className=" uppercase font-bold lg:text-[20px] text-green-500">
               featured app
             </p>
@@ -76,7 +76,7 @@ export default MainAppContent;
 const TotalCard = () => {
   return (
     <>
-      <div className=" dark:bg-slate-500 bg-gradient-to-bl from-sky-600 to-blue-300 dark:bg-gradient-to-tr dark:from-purple-600 dark:to-blue-200 py-2 px-2 lg:px-5 lg:py-5 rounded-lg">
+      <div className=" dark:bg-slate-500 bg-gradient-to-bl from-sky-600 to-blue-300 dark:bg-gradient-to-tr dark:from-purple-600 dark:to-blue-200 py-3 px-5 lg:px-5 lg:py-5 rounded-lg">
         <p>Total Active Users</p>
         <div className=" flex items-center justify-between">
           <div className="">
