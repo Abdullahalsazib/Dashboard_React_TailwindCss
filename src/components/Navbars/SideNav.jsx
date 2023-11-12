@@ -51,13 +51,15 @@ function SideNav(SideNavProps) {
     <>
       {/*  w-[342px] */}
       <div
-        className={`  bg-white dark:bg-slate-900  ${
-          myOpen === true ? " w-[60px] md:w-[80px]" : "w-[322px]"
-        } duration-200 relative`}
+        className={` 
+         bg-white   dark:bg-slate-900  
+        ${
+          myOpen === true ? " duration-150 -top-[100%] w-[320px] md:w-[80px] " : "w-[322px]"
+        } duration-200 top-14 md:left-0 md:top-0 absolute md:relative`}
       >
         <div className=" h-[75%]">
           {/* top section */}
-          <div className="logo flex items-center justify-center py-4 md:py-5 lg:py-4">
+          <div className=" hidden logo md:flex items-center justify-center py-4 md:py-5 lg:py-4">
             <Fa500Px className="dark:text-green-400 text-[25px] md:text-[28px] lg:text-[36px]  text-green-600" />
           </div>
           {/* sideoverFlew overflow-x-hidden*/}
@@ -74,7 +76,7 @@ function SideNav(SideNavProps) {
               {OverflowMenu.map((items, index) => (
                 <li
                   className={` py-[7px] px-5 ${
-                    myOpen && "flex items-center justify-center"
+                    myOpen && "flex items-center  md:justify-center"
                   }   rounded-md dark:hover:bg-slate-700 hover:bg-blue-400 duration-300  hover:text-white 0`}
                   key={index}
                 >
@@ -88,7 +90,9 @@ function SideNav(SideNavProps) {
                       <items.OverflowIcons />
                     )}
                     <span
-                      className={`${myOpen && "hidden"} text-sm lg:text-[16px]`}
+                      className={`${
+                        myOpen && " md:hidden"
+                      } text-sm lg:text-[16px]`}
                     >
                       {items.OverflowTitle}
                     </span>
@@ -116,7 +120,7 @@ function SideNav(SideNavProps) {
               {ManagementMenu.map((items, index) => (
                 <li
                   className={` py-[8px] px-5 ${myOpen && "mx-0"} ${
-                    myOpen && "flex items-center justify-center"
+                    myOpen && "flex items-center md:justify-center"
                   }   rounded-md dark:hover:bg-slate-700  hover:bg-blue-400 duration-300 hover:text-white 0`}
                   key={index}
                 >
@@ -131,7 +135,7 @@ function SideNav(SideNavProps) {
                     )}
                     <span
                       className={`${
-                        myOpen && "hidden"
+                        myOpen && "md:hidden"
                       }  text-sm md:text-[16px]`}
                     >
                       {items.ManagementTitle}
