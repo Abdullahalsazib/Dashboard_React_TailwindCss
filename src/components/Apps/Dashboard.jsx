@@ -15,7 +15,7 @@ function Dashboard() {
 
         <div className=" w-full dark:bg-slate-800 dark:text-white bg-slate-200">
           <TopNav onData={getData} />
-          <div className=" py-5 px-5 lg:h-[92vh] overflow-scroll overflow-x-hidden">
+          <div className=" py-5 px-5 h-[100vh] md:h-[92vh] overflow-scroll overflow-x-hidden">
             <MainAppContent />
             {/* contents heres */}
           </div>
