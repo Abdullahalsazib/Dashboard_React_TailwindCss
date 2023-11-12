@@ -10,7 +10,7 @@ function Dashboard() {
   };
   return (
     <div>
-      <div className=" flex w-full h-screen">
+      <div className=" flex w-full md:h-screen">
         <SideNav mainValue={open} />
 
         <div className=" w-full dark:bg-slate-800 dark:text-white bg-slate-200">

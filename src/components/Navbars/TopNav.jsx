@@ -54,18 +54,18 @@ function TopNav(TopNavProps) {
             )}
           </div>
           {/* search input */}
-          <div className=" hidden  input_box bg-none rounded-lg border-[2px] dark:border-none border-gray-300 lg:flex items-center py-2 px-3">
+          <div className=" input_box w-[50%] bg-none rounded-lg border-[2px] dark:border-none border-gray-300  flex items-center py-1 px-1 md:py-2 md:px-3">
             <Search className=" text-slate-400" />
             <input
               type="search"
-              className=" bg-transparent border-none outline-none px-3"
+              className=" w-[100%] lg:w-auto bg-transparent border-none outline-none px-3"
               placeholder="Search Anything..."
             />
           </div>
           {/* search input */}
         </div>
 
-        <div className=" flex items-center space-x-6">
+        <div className=" flex items-center  space-x-3 md:space-x-6">
           <div
             onClick={() => setLan(!lan)}
             className="relative hidden text-[16px] text-slate-500 dark:hover:text-slate-300 hover:text-slate-800 duration-200 cursor-pointer space-x-2 font-semibold lg:flex items-center"
@@ -159,7 +159,7 @@ export default TopNav;
 const TopMainIcons = (TopMainIconsProps) => {
   return (
     <>
-      <div className=" lg:block hidden bg-transparent p-2 rounded-full cursor-pointer">
+      <div className="  bg-transparent p-2 rounded-full cursor-pointer">
         <TopMainIconsProps.Icons
           className={`dark:text-slate-400 text-slate-600 text-[15px] hover:text-slate-800 duration-200 `}
         />
