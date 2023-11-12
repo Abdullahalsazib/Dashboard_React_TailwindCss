@@ -1,0 +1,14 @@
+.sideoverFlew::-webkit-scrollbar {
+  background-color: rgba(36, 34, 34, 0.407);
+  width: 5px;
+  border-radius: 30px;
+}
+.sideoverFlew{
+  scroll-behavior: smooth;
+}
+
+.sideoverFlew::-webkit-scrollbar-thumb {
+  background-color: rgba(226, 226, 226, 0.579);
+  border-radius: 30px;
+  
+}

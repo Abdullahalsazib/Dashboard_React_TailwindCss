@@ -1,0 +1,53 @@
+import { motion } from "framer-motion";
+import Dashboard from "./Components/Dashboard/Dashboard";
+import SideNavbar from "./Components/Dashboard/Navbars/SideNavbar";
+import { useEffect, useState } from "react";
+import Test from "./Sub_Components/Test";
+
+export default function App() {
+  const [theme, setTheme] = useState(null);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+  return (
+    <>
+      <motion.div className=" h-screen duration-500 dark:bg-black bg-white flex items-center justify-center">
+        {/* <div className=" w-full h-screen flex">
+          <SideNavbar />
+          
+          <div className=" w-full">
+            <Dashboard />
+          </div>
+        </div> */}
+        <div>
+          <motion.button
+            onClick={handleThemeSwitch}
+            className={` uppercase py-2 px-3 bg-black rounded-3xl  ${
+              theme === "light" ? " bg-black text-white" : "bg-white text-black"
+            }`}
+          >
+            {theme === "dark" ? "light btn" : "dark btn"}
+          </motion.button>
+          <Test />
+        </div>
+      </motion.div>
+    </>
+  );
+}
