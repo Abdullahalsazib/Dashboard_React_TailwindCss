@@ -10,10 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "chart.js": "^4.4.0",
     "framer-motion": "^10.16.4",
     "keep-react": "^1.0.1",
     "lucide-react": "^0.292.0",
     "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0"
   },
