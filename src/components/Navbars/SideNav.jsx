@@ -54,7 +54,9 @@ function SideNav(SideNavProps) {
         className={` 
          bg-white   dark:bg-slate-900  
         ${
-          myOpen === true ? " duration-150 -top-[100%] w-[320px] md:w-[80px] " : "w-[322px]"
+          myOpen === true
+            ? " duration-150 -top-[100%] w-[320px] md:w-[80px] "
+            : "w-[322px]"
         } duration-200 top-14 md:left-0 md:top-0 absolute md:relative`}
       >
         <div className=" h-[75%]">
