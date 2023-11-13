@@ -64,8 +64,7 @@ function MainAppContent() {
         </div>
         <div className=" grid grid-flow-row lg:grid-flow-col gap-y-5 lg:gap-y-0 gap-x-0 lg:gap-x-10">
           <PIeCard />
-         <LinCard/>
-          
+          <LinCard />
         </div>
       </div>
       {/* <div>
@@ -103,7 +102,7 @@ const PIeCard = () => {
   return (
     <>
       <div className=" dark:bg-slate-500 bg-gradient-to-bl from-green-800 to-blue-500 dark:bg-gradient-to-tr dark:from-green-200 dark:to-red-100 py-3 px-5 lg:px-5 lg:py-5 rounded-lg flex items-center justify-center">
-        <div className="w-[100%] flex items-center justify-center">
+        <div className="w-[90%] flex items-center justify-center">
           <PiChart />
         </div>
       </div>
@@ -115,8 +114,7 @@ const LinCard = () => {
     <>
       <div className=" bg-white dark:bg-slate-100 py-3 px-5 lg:px-5 lg:py-5 rounded-lg flex items-center justify-center">
         <div className="">
-
-          <LineChart/>
+          <LineChart />
         </div>
       </div>
     </>

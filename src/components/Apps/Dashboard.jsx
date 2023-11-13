@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TopNav from "../Navbars/TopNav";
 import SideNav from "../Navbars/SideNav";
 import MainAppContent from "./MainAppContent";
+import Subscription from "./Subscription/Subscription";
 
 function Dashboard() {
   const [open, setOpen] = useState();
@@ -17,6 +18,7 @@ function Dashboard() {
           <TopNav onData={getData} />
           <div className=" py-5 px-5 h-[100vh] md:h-[92vh] overflow-scroll overflow-x-hidden">
             <MainAppContent />
+            {/* <Subscription/> */}
             {/* contents heres */}
           </div>
         </div>

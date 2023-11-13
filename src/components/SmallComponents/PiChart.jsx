@@ -66,7 +66,7 @@ const Fdata = {
 function PiChart() {
   return (
     <div className="">
-      <Radar width="500" height="500" data={Fdata} />
+      <Radar width="400" height="500" data={Fdata} />
     </div>
   );
 }

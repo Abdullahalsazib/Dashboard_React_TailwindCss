@@ -22,6 +22,7 @@ function TopNav(TopNavProps) {
 
   const [dark, setDark] = useState(null);
   const [setting, setSetting] = useState(false);
+  const [topProfile, setTopProfile] = useState(false);
   useEffect(() => {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setDark("dark");
@@ -43,13 +44,10 @@ function TopNav(TopNavProps) {
     <div>
       <nav className=" dark:bg-slate-900 bg-white py-2 md:py-2 px-3 flex items-center justify-between">
         <div className="Logo_div flex items-center space-x-6">
-          <div
-            onClick={handleChange}
-            className=" cursor-pointer rounded-md "
-          >
+          <div onClick={handleChange} className=" cursor-pointer rounded-md ">
             {sideOpen === true ? (
               <X size="30" className="dark:text-teal-400 text-teal-600" />
-              ) : (
+            ) : (
               <Menu size="30" className="dark:text-teal-400 text-teal-600" />
             )}
           </div>
@@ -146,8 +144,38 @@ function TopNav(TopNavProps) {
           </div>
 
           {/* proflie icon */}
-          <div className=" p-2 lg:p-4 dark:bg-slate-500 bg-slate-300 rounded-full">
-            <User2 size="20" />
+          <div
+            onClick={() => setTopProfile(!topProfile)}
+            className=" cursor-pointer relative p-2 lg:p-4 dark:bg-slate-500 bg-slate-300 rounded-full"
+          >
+            {
+              topProfile === true ?
+              ''
+              :
+              <div className=" top-0 right-0 absolute w-3 h-3 bg-red-500 rounded-full"></div>
+            }
+            
+            {topProfile === true ? <X /> : <User2 size="20" />}
+            {topProfile && (
+              <>
+                <motion.div
+                  initial={{
+                    y: -200,
+                    opacity: 0.5,
+                  }}
+                  animate={{
+                    y: 0,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    duration: 0.3,
+                  }}
+                  className=" rounded-lg absolute top-[120%] right-0 w-[300px]  dark:bg-slate-900 dark:text-white py-3 px-4 bg-white text-black"
+                >
+                  <TopProfileBox />
+                </motion.div>
+              </>
+            )}
           </div>
         </div>
       </nav>
@@ -176,6 +204,39 @@ const LengAndFlg = (LengAndFlgProps) => {
       >
         <p>{LengAndFlgProps.CountryName}</p>
         <p>{LengAndFlgProps.LanFlg}</p>
+      </div>
+    </>
+  );
+};
+
+const TopProfileBox = () => {
+  return (
+    <>
+      <div className=" rounded-md py-6 px-2">
+        {/* ...///... */}
+        <div className=" flex items-center justify-center">
+          <div className={`  relative p-5 rounded-full bg-slate-300`}>
+            <User2 />
+            <div className=" rounded-md px-2 capitalize text-white  bg-orange-500 absolute -top-2 -right-7">
+              free
+            </div>
+          </div>
+        </div>
+
+        {/* .////. */}
+        <div className={`grid grid-flow-row justify-center`}>
+          <h1 className="dark:text-white text-center  font-semibold  lg:text-[22px]">
+            Jack Sparrow
+          </h1>
+          <p className="  dark:text-slate-300 text-center text-[10px] lg:text-sm text-slate-500">
+            jacksparrow220@gmail.com
+          </p>
+        </div>
+        <div className={` flex items-center justify-center `}>
+          <button className="  mt-3 capitalize  py-2 px-4 lg:py-2 lg:px-5 hover:bg-slate-700 duration-200 hover:text-purple-300 bg-black text-white font-semibold text-center rounded-md">
+            Upgrade to Pro
+          </button>
+        </div>
       </div>
     </>
   );
